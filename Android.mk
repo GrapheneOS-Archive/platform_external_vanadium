@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := Vanadium
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MULTILIB := both
-LOCAL_CERTIFICATE := $(DEFAULT_SYSTEM_DEV_CERTIFICATE)
+LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_REQUIRED_MODULES := \
         libwebviewchromium_loader \
         libwebviewchromium_plat_support
