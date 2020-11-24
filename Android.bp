@@ -1,0 +1,65 @@
+android_app_import {
+    name: "TrichromeLibrary",
+    product_specific: true,
+    presigned: true,
+    arch: {
+        arm: {
+            apk: "prebuilt/arm/TrichromeLibrary.apk"
+        },
+        arm64: {
+            apk: "prebuilt/arm64/TrichromeLibrary.apk"
+        },
+        x86: {
+            apk: "prebuilt/x86/TrichromeLibrary.apk"
+        },
+        x86_64: {
+            apk: "prebuilt/x86_64/TrichromeLibrary.apk"
+        },
+    }
+}
+
+android_app_import {
+    name: "TrichromeWebView",
+    product_specific: true,
+    presigned: true,
+    required: [
+        "libwebviewchromium_loader",
+        "libwebviewchromium_plat_support",
+        "TrichromeLibrary"
+    ],
+    arch: {
+        arm: {
+            apk: "prebuilt/arm/TrichromeWebView.apk"
+        },
+        arm64: {
+            apk: "prebuilt/arm64/TrichromeWebView.apk"
+        },
+        x86: {
+            apk: "prebuilt/x86/TrichromeWebView.apk"
+        },
+        x86_64: {
+            apk: "prebuilt/x86_64/TrichromeWebView.apk"
+        },
+    }
+}
+
+android_app_import {
+    name: "TrichromeChrome",
+    product_specific: true,
+    presigned: true,
+    required: ["TrichromeLibrary"],
+    arch: {
+        arm: {
+            apk: "prebuilt/arm/TrichromeChrome.apk"
+        },
+        arm64: {
+            apk: "prebuilt/arm64/TrichromeChrome.apk"
+        },
+        x86: {
+            apk: "prebuilt/x86/TrichromeChrome.apk"
+        },
+        x86_64: {
+            apk: "prebuilt/x86_64/TrichromeChrome.apk"
+        },
+    }
+}
